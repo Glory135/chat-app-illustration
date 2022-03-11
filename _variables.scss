@@ -1,0 +1,30 @@
+$primary: hsl(270, 20%, 96%);
+$secondary: hsl(271, 36%, 24%);
+$tertiary: hsl(289, 100%, 72%);
+$text-recieved: hsl(276, 55%, 52%);
+$text-sent: hsl(271, 15%, 43%);
+$text-placeholder: hsl(206, 6%, 79%);
+$text-heading: hsl(271, 36%, 24%);
+$text-p: hsl(270, 7%, 64%);
+$text-sub-heading: hsl(276, 100%, 81%);
+$white: white;
+
+$gradient: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+
+$base-font-size: 16px;
+
+@mixin position($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+$breakpoints: (
+  "sm": 480px,
+);
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
